@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Price List and Order Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        
+        .price-list {
+            margin-bottom: 20px;
+        }
+        
+        .price-list table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        .price-list th,
+        .price-list td {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+        
+        .price-list th {
+            background-color: #f2f2f2;
+            text-align: left;
+        }
+        
+        .order-form {
+            max-width: 400px;
+        }
+        
+        .order-form label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        
+        .order-form input,
+        .order-form select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Price List</h1>
+    <div class="price-list">
+        <table>
+            <thead>
+                <tr>
+                    <th>Item</th>
+                    <th>Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Item 1</td>
+                    <td>$10.00</td>
+                </tr>
+                <tr>
+                    <td>Item 2</td>
+                    <td>$20.00</td>
+                </tr>
+                <tr>
+                    <td>Item 3</td>
+                    <td>$30.00</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h1>Order Form</h1>
+    <div class="order-form">
+        <form action="submit_order.php" method="post">
+            <label for="customer-name">Name:</label>
+            <input type="text" id="customer-name" name="customer-name" required>
+
+            <label for="customer-email">Email:</label>
+            <input type="email" id="customer-email" name="customer-email" required>
+
+            <label for="item">Select Item:</label>
+            <select id="item" name="item" required>
+                <option value="item1">Item 1 - $10.00</option>
+                <option value="item2">Item 2 - $20.00</option>
+                <option value="item3">Item 3 - $30.00</option>
+            </select>
+
+            <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity" name="quantity" min="1" required>
+
+            <input type="submit" value="Place Order">
+        </form>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .btn-red {
+            background-color: red;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        
+        .btn-green {
+            background-color: green;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        
+        .btn-blue {
+            background-color: blue;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        
+        .btn:hover {
+            opacity: 0.8;
+            /* Add hover effect */
+        }
+    </style>
+    <title>Color Buttons</title>
+</head>
+
+<body>
+
+    <button class="btn-red"> Red Button</button>
+    <button class="btn-green"> Green Button</button>
+    <button class="btn-blue"> Blue Button</button>
+</body>
+<script>
+    document.body.style.backgroundColor = "red";
+    document.body.style.backgroundColor = "green";
+    document.body.style.backgroundColor = "blue";
+
+    function changeColor() {
+        // Random color using rgb
+        const r = Math.floor(Math.random() * 256);
+        const g = Math.floor(Math.random() * 256);
+        const b = Math.floor(Math.random() * 256);
+        document.body.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+    }
+</script>
+
+</html>

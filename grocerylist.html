@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grocery List App</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="./app.css">
+  <script src="./app.js"></script>
+</head>
+<body>
+  <div class="container mt-5">
+    <h1 class="text-center">Grocery List</h1>
+    <div class="row justify-content-center mt-4">
+      <div class="col-md-6">
+        <div class="input-group mb-3">
+          <input type="text" id="itemInput" class="form-control" placeholder="Add new item" aria-label="Add new item">
+          <div class="input-group-append">
+            <button class="btn btn-primary" type="button" id="addItemButton">Add</button>
+          </div>
+        </div>
+        <ul class="list-group" id="groceryList"></ul>
+      </div>
+    </div>
+</body>
+</html>
